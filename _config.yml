@@ -31,6 +31,10 @@ github_username:  ziemek-bucko
 theme: minima
 plugins:
   - jekyll-feed
+minima:
+  social_links:
+    twitter: ziemek_bucko
+    github: ziemek-bucko
 
 collections:
   content:
