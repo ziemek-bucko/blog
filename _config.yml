@@ -35,7 +35,9 @@ plugins:
   - jekyll-feed
 
 collections:
-  - content
+  content:
+    output: true
+    permalink: /content/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
