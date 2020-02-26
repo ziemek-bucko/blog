@@ -7,8 +7,7 @@ layout: home
 
 {% for content in site.content %}
 
-<a href="{{ content.url | prepend: site.baseurl }}">
-  <h2>{{ content.title }}</h2>
+  <h2><a href="{{ content.url }}">{{ content.title }}</a></h2>
 
 <p class="post-excerpt">{{ content.description | truncate: 160 }}</p>
 
