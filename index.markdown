@@ -9,7 +9,6 @@ layout: home
 
 <a href="{{ content.url | prepend: site.baseurl }}">
   <h2>{{ content.title }}</h2>
-</a>
 
 <p class="post-excerpt">{{ content.description | truncate: 160 }}</p>
 
