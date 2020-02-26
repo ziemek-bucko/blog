@@ -21,7 +21,7 @@
 title: ziemek.life
 email: ziemek@onely.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Half-blog, half-orc.
+  Welcome to my blog. Hope I helped!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ziemek_bucko
