@@ -40,6 +40,9 @@ collections:
   content:
     output: true
     permalink: /content/:path/
+  blog:
+    output: true
+    permalink: /blog/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
