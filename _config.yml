@@ -37,12 +37,10 @@ minima:
     github: ziemek-bucko
 
 collections:
-  content:
-    output: true
-    permalink: /content/:path/
-  blog:
-    output: true
-    permalink: /blog/:path/
+    content:
+      output: true
+      permalink: /content/:path/
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
