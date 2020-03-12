@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Data
+title: Home
 ---
 
 {% for content in site.content %}
