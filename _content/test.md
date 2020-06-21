@@ -4,7 +4,7 @@ title: Here's where it starts
 description: How my life suddenly changed and how I found a new place for myself.
 ---
 
-I have a memory from a little over a year ago that keeps coming back to me.
+<h3>I have a memory from a little over a year ago that keeps coming back to me.</h3>
 
 I am in the mountains just outside Salzburg. I am standing on a trail, starting just outside of where I live. I've been here dozens of times, either to run or to hike. The trail goes up a magnificent Alpine crevasse and there’s an ice-cold stream running along it. It makes the trail particularly popular when it gets warm in the summer.
 
