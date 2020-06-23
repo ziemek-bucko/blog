@@ -18,13 +18,11 @@ Just a couple of days before that, some of my best friends visited me and my gir
 
 Still, part of me wishes I spent just a couple of moments during these days trying to remember what it’s like to hear the way I always did.
 
-
+&nbsp;
 
 I am a musician. I've known that I wanted to play music professionally since I was around 14, much before I knew what it was really about.
 
 When I partially lost my hearing, I was on my way towards my second Master's degree in classical music performance, studying at one of the best music universities in Europe. While making a living from playing the classical guitar isn't easy, I was confident that I could make it work. Classical music takes absolute commitment and loads of motivation, and it's only natural that musicians rarely think about external factors that can influence their path towards excellence.
-
-
 
 After weeks spent in a hospital and months of therapy, I regained some of the hearing in my right ear. While my left ear is completely fine, I can't hear any higher pitches with my right, and anything that I hear with it is distorted, like the whole world was made of tin.
 
