@@ -39,7 +39,7 @@ minima:
 collections:
     content:
       output: true
-      permalink: /content/:path/
+      permalink: /:path/
 
 
 # Exclude from processing.
