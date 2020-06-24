@@ -2,11 +2,12 @@
 layout: page
 title: ggplot2 Theme Cheat Sheet (with code examples!)
 description: All the ways in which you can customize your data visualizations in ggplot2.
+toc: true
 ---
+{% toc %}
+ggplot2 is an extremely popular library for data visualization.
 
-ggplot is an extremely popular library for data visualization. One of the reasons for that is that it allows you to easy to customize the visual aspects of your graphics.
-
-Using the theme() function, you can customize every element of your visualization, ranging from the margins around various elements to the font family, size and color.
+Using the theme() function from the ggplot2 library, you can customize every element of your visualization, ranging from the margins around various elements to the font family, size and color.
 
 In this post, I'll show you how you can customize your ggplot step by step, using the data from <code>library(palmerpenguins)</code>.
 
@@ -37,3 +38,7 @@ mytheme = theme(plot.background = element_rect(fill = "#0a1c40"),
                                     hjust = 0,
                                     margin=margin(0,0,0,0)))
 {% endhighlight %}
+
+<h1>Lorem ipsum dolor sit amet</h1>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<h2>Lorem ipsum dolor sit amet</h2>
