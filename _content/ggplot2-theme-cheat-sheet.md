@@ -46,3 +46,5 @@ p = ggplot(data, aes(x = bill_length_mm, y = flipper_length_mm, color = species)
 p
 ```
 ![A basic penguins plot](/assets/penguins.png)
+
+This plot is definitely readable and informative, but there's room for improvement.
