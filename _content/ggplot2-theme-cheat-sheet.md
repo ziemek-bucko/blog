@@ -7,7 +7,7 @@ description: All the ways in which you can customize your data visualizations in
 1. asd
 {:toc}
 
-## Introduction
+# Introduction
 
 ggplot2 is an extremely popular library for data visualization.
 
@@ -29,7 +29,7 @@ data = penguins
 summary(data)
 ```
 
-Looking at the summary of our data, we have some missing values, particularly when it comes to the penguins' sex (I am assuming that as with many species of birds, it isn't always easy to tell their sex).
+Looking at the summary of our data, we have some missing values, particularly when it comes to the penguins' sex (As with many species of birds, <a href="https://www.antarctica.gov.au/about-antarctica/animals/penguins/gentoo-penguins/#:~:text=Males%20tend%20to%20be%20larger,from%20other%20species%20of%20penguin">it isn't always easy to determine a penguin's sex</a>).
 
 For the purpose of this article, let's just omit all the rows where there are missing data.
 
@@ -42,9 +42,14 @@ Now, let's look at a simple plot showing how bill and flipper lengths vary among
 
 ``` r
 p = ggplot(data, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) +
-  geom_point()
+  geom_point() +
+  labs(title = "The bill and flipper lengths of various penguin species",
+  subtitle = "The Gentoo penguins have longer bills and flippers.",
+  caption = "Data collected by Dr Kristen Gorman")
 p
 ```
 ![A basic penguins plot](/assets/penguins.png)
 
 This plot is definitely readable and informative, but there's room for improvement.
+
+# Labels
