@@ -54,15 +54,17 @@ p
 
 This plot is definitely readable and informative, but there's room for improvement.
 
-# Text elements
+# Text styling
 
-Text elements of your plots can be altered by using the element_text() function together with theme().
+Text elements of your plots can be altered by using the element_text() function.
 
-Let's start with altering all text elements in bulk.
+## Text elements
 
-## Bulk styling
+Styling text elements can be done either globally or by modifying each text element on a granular level.
 
-If you pass a specified <b>text</b> argument to the theme() function, you modify all your text elements at once.
+
+
+## element_text() arguments
 
 ```r
 p + theme(
@@ -74,7 +76,7 @@ p + theme(
   hjust = 0.5,
   vjust = 0.5,
   angle = 0,
-  lineheight = 5,
+  lineheight = 1,
   margin = margin(0,0,0,0),
   debug = FALSE,
   inherit.blank = FALSE
@@ -82,14 +84,26 @@ p + theme(
 ```
 That's a lot of arguments, right? Fortunately, they are mostly self-explanatory:
 
-* family: Your desired font family. To browse available fonts, use windowsFonts().
+### family
+Your desired font family. To browse available fonts, use windowsFonts().
 
-* face: You can pick the font face from among "plain", "italic", "bold", or "bold.italic". Keep in mind that in some cases, font face may already be specified in the family argument.
+### face
+You can pick the font face from among "plain", "italic", "bold", or "bold.italic". Keep in mind that in some cases, font face may already be specified in the family argument.
 
-* color: The color of your text. You can use both <a href="http://sape.inf.usi.ch/sites/default/files/ggplot2-colour-names.png">R's predefined colors</a> and hexadecimal values.
+* **color**: The color of your text. You can use both <a href="http://sape.inf.usi.ch/sites/default/files/ggplot2-colour-names.png">R's predefined colors</a> and hexadecimal values.
 
-* size: Your desired text size in <a href="https://www.computerhope.com/jargon/f/font-size.htm#:~:text=A%20font%20is%20often%20measured,a%20half%20of%20an%20inch.">points.</a>
+* **size**: Your desired text size in <a href="https://www.computerhope.com/jargon/f/font-size.htm#:~:text=A%20font%20is%20often%20measured,a%20half%20of%20an%20inch.">points.</a>
 
-* hjust: horizontal justification that takes a value between 0 and 1 (0: left-justified, 1: right-justified).
+* **hjust**: Horizontal justification that takes a value between 0 and 1 (0: left-justified, 1: right-justified). hjust and vjust are brilliantly explained in detail <a href="https://stackoverflow.com/questions/7263849/what-do-hjust-and-vjust-do-when-making-a-plot-using-ggplot">here</a>.
 
-* vjust: vertical justification, see above.
+* **vjust**: Vertical justification, see above.
+
+* **angle**: The angle of your text elements, ranging from 0-360 and applied counterclockwise.
+
+* **lineheight**: Line height that applies to text elements which occupy more than one line.
+
+* **margin**: The margin around your elements. The margin argument is used together with the margin() function. **margin() takes 5 arguments:** four margins specified in the direction of top, right, bottom, left, and the unit argument like "pt" for points, or "cm" for centimeters.
+
+* **debug**: This is a useful argument when working on your theme(). Setting the debug to a logical TRUE outputs a plot with all the text elements marked by colored rectangles, so that you can better see the effects of your changes.
+
+* **inherit_blank**: If set to TRUE, this argument makes an element inherit the blank state from its parent.
