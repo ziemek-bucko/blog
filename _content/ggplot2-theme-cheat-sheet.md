@@ -52,15 +52,19 @@ p
 ```
 ![A basic penguins plot](/assets/penguins.png)
 
-This plot is definitely readable and informative, but there's room for improvement.
+This plot is definitely readable and informative. But since you're here, you probably want to learn how to make your ggplot2 plots more custom.
 
 # Text styling
 
-Text elements of your plots can be altered by using the element_text() function.
+Text elements of your plots can be altered by using the *element_text()* function.
 
 ## Text elements
 
-Styling text elements can be done either globally or by modifying each text element on a granular level.
+Styling text elements can be done either globally using the *text* argument, or by modifying each text element on a granular level.
+
+Although the documentation claims that the *text* argument defines all text elements, this is not completely true - there's one exception to this rule.
+
+*axis.text* arguments inherit some properties from the default theme, instead of the *text* argument. This is a <a href="https://github.com/tidyverse/ggplot2/issues/2175">known issue</a> and it's unlikely to be fixed anytime soon. In any case, you need to define your axis text elements separately from the *text* argument.
 
 
 
@@ -71,7 +75,7 @@ p + theme(
   text = element_text(
   family = "Montserrat",
   face = "italic",
-  color = "sylbias",
+  color = "red",
   size = 13,
   hjust = 0.5,
   vjust = 0.5,
@@ -102,8 +106,8 @@ You can pick the font face from among "plain", "italic", "bold", or "bold.italic
 
 * **lineheight**: Line height that applies to text elements which occupy more than one line.
 
-* **margin**: The margin around your elements. The margin argument is used together with the margin() function. **margin() takes 5 arguments:** four margins specified in the direction of top, right, bottom, left, and the unit argument like "pt" for points, or "cm" for centimeters.
+* **margin**: The margin around your elements. The margin argument is used together with the margin() function. **margin() takes 5 arguments:** four margins specified in the direction of top, right, bottom, left, and the unit argument, such as "pt" for points, or "cm" for centimeters.
 
-* **debug**: This is a useful argument when working on your theme(). Setting the debug to a logical TRUE outputs a plot with all the text elements marked by colored rectangles, so that you can better see the effects of your changes.
+* **debug**: Setting the debug to a logical TRUE outputs a plot with all the text elements marked by colored rectangles, so that you can better see the effects of your changes.
 
 * **inherit_blank**: If set to TRUE, this argument makes an element inherit the blank state from its parent.
