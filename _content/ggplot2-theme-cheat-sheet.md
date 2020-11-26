@@ -167,6 +167,32 @@ p + theme(legend.background = element_rect(fill = "#8a8a8a"),
           panel.background = element_rect(fill = "#d1cdcd"))
 ```
 ![A penguins plot with a grey rect styling of panel and legend backgrounds](/assets/ggplot_cheat_sheet/penguins_4.jpeg)
+
+## element_rect() arguments
+
+```r
+p + theme(
+  rect = element_rect(
+    fill = NULL, 
+    colour = NULL, 
+    size = NULL, 
+    linetype = NULL, 
+    color = NULL)
+```
+
+element_rect() takes fewer arguments than element_text(), so we'll be done in no time!
+
+* **fill**: Determines the fill color of your rect elements.
+
+* **colour** (or **color**): The color of your borders.
+
+* **size**: The size of your borders in points.
+
+* **linetype**: The linetype of your border. You can choose from blank, solid, dashed, dotted, dotdash, longdash, and twodash. 
+You can also use an integer from 0-6, 0 being blank and 6 being twodash. Alternatively, you can pass a string of an even number of hexadecimal digits which give the lengths in consecutive positions in the string.
+
+![A plot showing various linetypes available in ggplot](/assets/ggplot_cheat_sheet/ggplot2-linetype-identity.png)
+
 # Lines styling
 
 # "Removing" ggplot elements 
