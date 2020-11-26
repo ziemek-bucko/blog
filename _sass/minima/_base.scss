@@ -114,7 +114,7 @@ a {
   }
 
   &:hover {
-    color: $text-color;
+    color: darken($link-base-color, 20%);
 
   }
 
