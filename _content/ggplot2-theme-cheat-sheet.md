@@ -15,7 +15,7 @@ Using the theme() function from the ggplot2 library, you can customize every ele
 
 You can both go granular by specifying the style of each and every element, or address them in bulk by using global line, rect, text, and title arguments passed to the theme() function.
 
-In this post, I'll show you how you can customize your plots step by step, using the data from <code>library(palmerpenguins)</code> (credits to <a href="https://github.com/allisonhorst/palmerpenguins">Allison Horst</a> for creating the dataset).
+In this post, I'll show you how you can customize your plots step by step using the theme() function and the element_text(), element_rect(), and element_line() arguments. I'll be using an example plot based on the data from <code>library(palmerpenguins)</code> (credits to <a href="https://github.com/allisonhorst/palmerpenguins">Allison Horst</a> for creating the dataset).
 
 ## Setting up
 Let's start by downloading and loading the package.
@@ -56,32 +56,40 @@ p
 
 This plot is definitely readable and informative. But since you're here, you probably want to learn how to make your ggplot2 plots more custom.
 
-# Text styling
+# Scoping
 
-Text elements of your plots can be altered by using the *element_text()* function.
+Before I get into styling, I should mention that there are two ways of styling your plots: global styling, and scoped styling.
 
-## Scoping element_text() styling
+## Global styling
 
-### Global styling
-
-You can style text elements globally using the *text* argument within the theme() function.
+You can style all your text, rect, or line elements globally by passing an argument that will define all of them to the theme() function.
+In the following example, I'm styling all my rect elements.
 
 ```r
-# Using the text argument, we can define all text elements of the plot.
-p + theme(
-  text = element_text()
+p + theme(rect = element_rect(
+  fill = "#d1cdcd"))
 ```
+![A penguins plot with a grey rect styling](/assets/ggplot_cheat_sheet/penguins_3.jpeg)
+
+There's one thing you should know about globally styling your text elements, though.
 
 Although the documentation claims that the *text* argument defines all text elements, technically this is not true - there's one exception to this rule.
 
 *axis.text* arguments inherit some properties from the default theme, instead of the *text* argument. This is a <a href="https://github.com/tidyverse/ggplot2/issues/2175">known issue</a> and it's unlikely to be fixed anytime soon. In any case, you need to define your axis text elements separately from the *text* argument.
 
-### Scoped styling
+## Scoped styling
 
-You can also modify each text element on a granular level. In the following example I'm defining the plot caption, subtitle, and title separately.
+You can also style rect elements separately. In the following example I'm styling the legend and panel backgrounds separately.
 
 ```r
-# It's also possible to define each text element separately.
+p + theme(legend.background = element_rect(fill = "#8a8a8a"),
+          panel.background = element_rect(fill = "#d1cdcd"))
+```
+![A penguins plot with a grey rect styling of panel and legend backgrounds](/assets/ggplot_cheat_sheet/penguins_4.jpeg)
+
+I can similarly style text elements. In the following example I'm defining the plot caption, subtitle, and title separately.
+
+```r
 X = element_text(
   color = "red")
 Y = element_text(
@@ -95,6 +103,10 @@ p + theme(
 )
 ```
 ![A penguins plot with colored text](/assets/ggplot_cheat_sheet/penguins_2.jpeg)
+
+# Text styling
+
+Text elements of your plots can be altered by using the *element_text()* function.
 
 ## element_text() arguments
 
@@ -115,8 +127,6 @@ p + theme(
   ))
 ```
 ![A penguins plot that's a little more customized](/assets/ggplot_cheat_sheet/penguins_1.jpeg)
-
-That's a lot of arguments, right? Fortunately, they are mostly self-explanatory:
 
 * **family**
 Your desired font family. To browse available fonts, use windowsFonts().
@@ -146,28 +156,6 @@ You can pick the font face from among "plain", "italic", "bold", or "bold.italic
 
 Borders and backgrounds of your plots can be altered by using the element_rect() function.
 
-## Scoping element_rect() styling
-
-### Global styling
-
-You can style rect elements globally using the rect argument within the theme() function.
-
-```r
-p + theme(rect = element_rect(
-  fill = "#d1cdcd"))
-```
-![A penguins plot with a grey rect styling](/assets/ggplot_cheat_sheet/penguins_3.jpeg)
-
-### Scoped styling
-
-You can also scope your rect elements separately. In the following example I'm styling the legend and panel backgrounds separately.
-
-```r
-p + theme(legend.background = element_rect(fill = "#8a8a8a"),
-          panel.background = element_rect(fill = "#d1cdcd"))
-```
-![A penguins plot with a grey rect styling of panel and legend backgrounds](/assets/ggplot_cheat_sheet/penguins_4.jpeg)
-
 ## element_rect() arguments
 
 ```r
@@ -179,8 +167,6 @@ p + theme(
     linetype = NULL, 
     color = NULL)
 ```
-
-element_rect() takes fewer arguments than element_text(), so we'll be done in no time!
 
 * **fill**: Determines the fill color of your rect elements.
 
@@ -195,5 +181,6 @@ You can also use an integer from 0-6, 0 being blank and 6 being twodash. Alterna
 
 # Lines styling
 
+Your ggplot lines can be styled using the element_line() function.
 # "Removing" ggplot elements 
 
