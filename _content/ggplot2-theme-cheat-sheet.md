@@ -104,11 +104,7 @@ p + theme(
 ```
 ![A penguins plot with colored text](/assets/ggplot_cheat_sheet/penguins_2.jpeg)
 
-# Text styling
-
-Text elements of your plots can be altered by using the *element_text()* function.
-
-## element_text() arguments
+# element_text() arguments
 
 ```r
 p + theme(
@@ -152,11 +148,7 @@ You can pick the font face from among "plain", "italic", "bold", or "bold.italic
 
 * **inherit_blank**: If set to TRUE, this argument makes an element inherit the blank state from its parent.
 
-# Borders and backgrounds styling
-
-Borders and backgrounds of your plots can be altered by using the element_rect() function.
-
-## element_rect() arguments
+# element_rect() arguments
 
 ```r
 p + theme(
@@ -179,8 +171,9 @@ You can also use an integer from 0-6, 0 being blank and 6 being twodash. Alterna
 
 ![A plot showing various linetypes available in ggplot](/assets/ggplot_cheat_sheet/ggplot2-linetype-identity.png)
 
-# Lines styling
+## element_line() arguments
 
-Your ggplot lines can be styled using the element_line() function.
+
+
 # "Removing" ggplot elements 
 
